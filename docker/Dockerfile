@@ -1,6 +1,6 @@
 FROM nginx:1.25.3-alpine-slim
 
-COPY ./docker/default.conf /etc/nginx/conf.d/default.conf
+COPY ./docker/mysite.conf /etc/nginx/conf.d/mysite.conf
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 COPY ./docker/.htpasswd /etc/nginx/.htpasswd
 
