@@ -25,6 +25,8 @@ deploy:
     - docker compose -f docker-compose.yml pull --quiet
     - docker compose -f docker-compose.yml down
     - docker compose -f docker-compose.yml up -d
+    - cd haproxy
+    - docker compose -f docker-compose.yml up -d
     - docker system prune -a --force
   after_script:
     - docker logout $CI_REGISTRY

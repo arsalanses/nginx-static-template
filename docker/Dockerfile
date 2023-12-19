@@ -6,5 +6,5 @@ COPY ./docker/.htpasswd /etc/nginx/.htpasswd
 
 COPY . /usr/share/nginx/html
 
-# docker build -t "server:latest" -f docker/Dockerfile .
-# docker run --rm -d -p8080:80 server:latest
+# docker build -t "landing:latest" -f docker/Dockerfile .
+# docker run --rm -d --network web -p8080:80 --name landing landing:latest
